@@ -211,7 +211,7 @@ a {
 }
 
 /* ==========================================================================
-   INTERACTIVE CONSTELLATION WEB CANVAS & FLOATING PYTHON CODE BADGES
+   INTERACTIVE CONSTELLATION WEB CANVAS
    ========================================================================== */
 #constellation-canvas {
   position: absolute;
@@ -221,99 +221,6 @@ a {
   height: 100%;
   pointer-events: none;
   z-index: 3;
-}
-
-/* Floating Python Code Environment */
-.cosmic-code-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.cosmic-code-chip {
-  position: absolute;
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-  font-size: 0.78rem;
-  background: rgba(13, 7, 28, 0.62);
-  border: 1px solid rgba(192, 132, 252, 0.26);
-  border-radius: 9px;
-  padding: 8px 13px;
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 18px rgba(168, 85, 247, 0.14);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #e2e8f0;
-  line-height: 1.45;
-  white-space: pre;
-  user-select: none;
-  pointer-events: none;
-  will-change: transform, opacity;
-  animation: chipGlowPulse 6s ease-in-out infinite alternate;
-  transition: border-color 0.3s ease;
-}
-
-.cosmic-code-chip .chip-header {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 5px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.cosmic-code-chip .chip-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.cosmic-code-chip .chip-dot.red { background: #ef4444; box-shadow: 0 0 5px rgba(239, 68, 68, 0.7); }
-.cosmic-code-chip .chip-dot.yellow { background: #eab308; box-shadow: 0 0 5px rgba(234, 179, 8, 0.7); }
-.cosmic-code-chip .chip-dot.green { background: #22c55e; box-shadow: 0 0 5px rgba(34, 197, 94, 0.7); }
-
-.cosmic-code-chip .chip-lang {
-  margin-left: auto;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: rgba(192, 132, 252, 0.75);
-  text-transform: uppercase;
-}
-
-/* Python Syntax Highlighting Classes */
-.py-kw { color: #f472b6; font-weight: 600; }
-.py-fn { color: #38bdf8; font-weight: 500; }
-.py-str { color: #34d399; }
-.py-num { color: #fbbf24; }
-.py-var { color: #f1f5f9; }
-.py-op { color: #c084fc; }
-.py-comment { color: #94a3b8; font-style: italic; }
-.py-builtin { color: #a78bfa; font-weight: 600; }
-
-@keyframes chipGlowPulse {
-  0% {
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 14px rgba(168, 85, 247, 0.12);
-  }
-  100% {
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 24px rgba(192, 132, 252, 0.26);
-  }
-}
-
-@media (max-width: 768px) {
-  .cosmic-code-chip {
-    font-size: 0.66rem;
-    padding: 6px 10px;
-  }
-  .cosmic-code-chip.hide-mobile {
-    display: none;
-  }
 }
 
 /* ==========================================================================
